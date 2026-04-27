@@ -31,6 +31,17 @@ Esp32 S3 has a different method to flash, means you need to add few commands to 
 These commands are mentioned in the .ino file so read it carefully before proceeding. Every other ESP32 will work just fine ( i have tested with both Wroom32u
 and S3 supermini and both worked as expected ). NodeMCU devices such as Esp8266/D1 Mini ARE NOT tested, so results are not guaranteed.
 
+### How to install 🤔
+
+1. Download the project from this github repository.
+2. Extract and open TFT_Eyes.ino.
+3. Go to Tools on the arduino IDE, disable USB CDC on boot, choose PSRAM type as QSPI &
+Choose board type as ESP32S3 development module if you are on S3.
+4. Go to arduino installation directory, find a folder called ' Libraries '.
+5. Inside it move to TFT_eSPI folder and paste User_setup_select.h, this will ask to overwrite the existing file, choose YES.
+6. Go to User_Setup folder which exists inside the TFT_eSPI folder and paste the Setup203_ST7789.h.
+7. Save changes, click install on Arduino IDE, wait for the installation and you are good to go.
+
 # Final thoughts
 
 I am no expert in coding and my oled screen going to shadow realm inspired me to make this project. ( LOL 🥸😅 ). As well as i made a lot ( an actual lot ) 
