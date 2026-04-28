@@ -28,8 +28,17 @@ and flash it to your ESP. You will need to install the TFT_eSPI library via Ardu
 ### ----- ESP32 S3 SPECIAL NOTICE -----
 
 Esp32 S3 has a different method to flash, means you need to add few commands to your TFT_eSPI library to make it work well with the TFT screen.
-These commands are mentioned in the .ino file so read it carefully before proceeding. Every other ESP32 will work just fine ( i have tested with both Wroom32u
-and S3 supermini and both worked as expected ). NodeMCU devices such as Esp8266/D1 Mini ARE NOT tested, so results are not guaranteed.
+These commands are mentioned in the .ino file so read it carefully before proceeding. Every other ESP32 will work just fine ( i have tested with both Wroom32u and S3 supermini and both worked as expected ). NodeMCU devices such as Esp8266/D1 Mini ARE NOT tested, so results are not guaranteed.
+
+### Pin diagram for ESP 32 ( Generic ESP32 setup )
+TFT_MISO -1 // Not connected
+TFT_MOSI 11 ( SDA )
+TFT_SCLK 12 ( SCL )
+TFT_CS    3 
+TFT_DC    2
+TFT_RST   1  // Connect reset to ensure display initialises
+
+### Special Note : MOSI & SCLK SHOULD ALWAYS BE THESE PINS IN ESP32S3 VARIENTS 🙂‍↔️
 
 ### How to install 🤔
 
